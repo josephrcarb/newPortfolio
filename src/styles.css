@@ -1,0 +1,154 @@
+body {
+  background: #fbfefb;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+h1,
+h2 {
+  font-weight: 60;
+  font-size: 55px;
+  text-shadow: 2px 2px 40px #141414;
+}
+
+a {
+  color: #141414;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #14141498;
+}
+a:focus {
+  text-decoration: none;
+}
+
+/* HEADER CSS */
+.header {
+  background: #fbfefb;
+  padding: 30px;
+  border-bottom: 2px solid #14141460;
+  position: sticky;
+  top: 0;
+  height: 115px;
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 2px 2px 40px #1414142f;
+}
+.header .profile-content .name {
+  color: #141414;
+  font-size: 50px;
+  font-family: "Noto Serif", serif;
+}
+.header .profile-content .desc {
+  color: #141414cb;
+  font-size: 35px;
+  font-family: "Noto Serif", serif;
+}
+/* Banner */
+.banner {
+  height: 650px;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../public/img/mountains.jpg");
+  box-shadow: 2px 2px 40px #1414142f;
+}
+.banner .banner-content {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content .b-items {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Serif", serif;
+}
+.banner-content .b-items .ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+  color: #141414;
+  flex-direction: column;
+  background-color: #f6fff8;
+}
+.banner-content .b-items .btn {
+  font-size: 35px;
+  border-radius: 5px;
+  border: solid 1px;
+  padding: -1px;
+}
+.banner-content .b-items .social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 55px;
+  padding: 15px;
+  color: #141414;
+}
+
+/*Small Banner*/
+.small-banner {
+  width: 90%;
+  height: 185px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaf4f4;
+  right: 5%;
+  border-radius: 5%;
+  box-shadow: 2px 2px 40px #1414142f;
+}
+
+.small-banner .s-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.s-items .s-btn {
+  border-radius: 5%;
+  border: solid 3px #000000da;
+  padding: 5px;
+  font-size: 20px;
+  font-family: "Noto Serif", serif;
+}
+.s-items .s-social {
+  font-size: 50px;
+}
+.s-items .s-text {
+  font-family: "Noto Serif", serif;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Main Components*/
+.main-content {
+}
+.main-content .l-main {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin-top: 25px;
+}
+.l-main .section {
+}
+.main-content .r-main {
+  display: flex;
+  height: 100%;
+  margin-top: 25px;
+  flex-direction: column;
+}
