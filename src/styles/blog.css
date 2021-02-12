@@ -1,0 +1,88 @@
+/*
+*
+Author: Joseph Carbone
+Last Edited: 02/11/2021
+https://github.com/josephrcarb/newPortfolio
+*
+*/
+body {
+  background: #fafafa;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: "Noto Serif", serif;
+}
+h1,
+h2 {
+  font-weight: 60;
+  font-size: 55px;
+  text-shadow: 2px 2px 40px #141414;
+}
+a {
+  color: #141414;
+}
+a:hover {
+  text-decoration: none;
+  color: #14141498;
+}
+a:focus {
+  text-decoration: none;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* HEADER CSS */
+.header {
+  background: #fafafa;
+  padding: 30px;
+  border-bottom: 2px solid #14141460;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  height: 115px;
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 2px 2px 40px #1414142f;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .profile-content {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  width: 100%;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+}
+.header .profile-content h3 {
+  margin: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 4px;
+}
+.header .profile-content a:hover {
+  color: rgba(0, 0, 0, 0.418);
+}
+main a {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Responsive CSS */
+@media only screen and (max-width: 767px) {
+  .header {
+    position: relative;
+  }
+  .header .profile-content {
+    display: none;
+  }
+}

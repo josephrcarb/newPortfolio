@@ -1,7 +1,16 @@
+/*
+*
+Author: Joseph Carbone
+Last Edited: 02/11/2021
+https://github.com/josephrcarb/newPortfolio
+*
+*/
+
 body {
   background: #fafafa;
   overflow-x: hidden;
   overflow-y: scroll;
+  font-family: "Noto Serif", serif;
 }
 h1,
 h2 {
@@ -9,17 +18,22 @@ h2 {
   font-size: 55px;
   text-shadow: 2px 2px 40px #141414;
 }
-
 a {
   color: #141414;
 }
-
 a:hover {
   text-decoration: none;
   color: #14141498;
 }
 a:focus {
   text-decoration: none;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 /* HEADER CSS */
@@ -35,24 +49,30 @@ a:focus {
   z-index: 1000;
   box-shadow: 2px 2px 40px #1414142f;
 }
-.header .profile-content .name {
-  color: #141414;
-  font-size: 50px;
-  font-family: "Noto Serif", serif;
-}
-.header .profile-content .desc {
-  color: #141414cb;
-  font-size: 35px;
-  font-family: "Noto Serif", serif;
-}
-
-main {
+.header .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .profile-content {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  width: 100%;
+  right: 0;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
+.header .profile-content h3 {
+  margin: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 4px;
+}
+.header .profile-content a:hover {
+  color: rgba(0, 0, 0, 0.418);
+}
+
 /* Banner */
 .banner {
   height: 650px;
@@ -62,7 +82,7 @@ main {
   position: relative;
   background-position: center center;
   background-size: cover;
-  background-image: url("../public/img/mountains.jpg");
+  background-image: url("../../public/img/mountains.jpg");
   box-shadow: 2px 2px 40px #1414142f;
 }
 .banner .banner-content {
@@ -80,7 +100,6 @@ main {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  font-family: "Noto Serif", serif;
 }
 .banner-content .b-items .ul {
   display: flex;
@@ -120,7 +139,6 @@ main {
   border-radius: 5px;
   box-shadow: 2px 2px 40px #1414142f;
 }
-
 .small-banner .s-items {
   display: flex;
   justify-content: center;
@@ -133,13 +151,11 @@ main {
   border: solid 3px #000000da;
   padding: 5px;
   font-size: 20px;
-  font-family: "Noto Serif", serif;
 }
 .s-items .s-social {
   font-size: 40px;
 }
 .s-items .s-text {
-  font-family: "Noto Serif", serif;
   text-align: center;
   font-size: 15px;
   font-weight: 700;
@@ -156,7 +172,7 @@ main {
   display: flex;
   height: 100%;
   flex-direction: column;
-  justify-content: space-between center;
+  justify-content: center;
   align-items: center;
   margin-top: 25px;
   position: relative;
@@ -169,7 +185,6 @@ main {
   align-items: center;
   flex-direction: column;
   padding: 25px;
-  font-family: "Noto Serif", serif;
   left: 12.5%;
   background-color: #ffffff;
   margin: 5px;
@@ -184,17 +199,6 @@ main {
   font-weight: 300;
   font-size: 20px;
   text-align: justify;
-}
-/* Right Side */
-.main-content .r-main {
-  display: flex;
-  height: 100%;
-  margin-top: 25px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  right: 7%;
 }
 
 /* Project Section */
@@ -244,7 +248,140 @@ main {
   color: #000608;
   text-decoration: underline;
 }
+/* Right Side */
+.main-content .r-main {
+  display: flex;
+  height: 100%;
+  margin-top: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 7%;
+}
+.r-main aside {
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 25px;
+  box-shadow: 2px 2px 40px #1414142f;
+}
+.r-main aside h3 {
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.r-main aside h4 {
+  text-align: center;
+}
+.r-main aside p {
+  font-weight: 300;
+  font-size: 20px;
+  text-align: justify;
+}
+.r-main a {
+  color: #0073a0;
+}
+.r-main a:hover {
+  text-decoration: underline;
+}
+/* Education Section */
+.r-main .e-section .content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.e-section .content .e-img-a {
+  height: 100px;
+  overflow: hidden;
+  width: 75%;
+}
+.e-section .content .e-img {
+  width: 100%;
+  height: 100%;
+}
+/* Skills Section */
+.s-section .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-wrap: normal;
+}
+.s-section h4 {
+  font-weight: 900;
+  font-size: 75px;
+}
 
+/* Certification Section */
+.c-section h4 {
+  font-weight: 400;
+  font-size: 40px;
+}
+.c-section .c-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 50px #14141428;
+  margin: 10px;
+  padding: 10px;
+}
+/* Information Section */
+.i-section a {
+  color: #000608;
+}
+.i-section {
+  overflow: hidden;
+}
+.i-section a:hover {
+  text-decoration: none;
+  color: #0006086b;
+}
+
+/* Footer */
+.footer-container {
+  display: none;
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  border-top: 2px solid #14141460;
+  box-shadow: 2px 2px 40px #14141450;
+  padding: 5px;
+}
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content .f-text-btn {
+  padding: 2px;
+  border: 1px solid #141414;
+  border-radius: 5px;
+  margin: 15px;
+  align-items: center;
+}
+.footer-content .f-text-btn:hover {
+  color: #0006087c;
+}
+/* Responsive CSS */
 @media only screen and (max-width: 415px) {
   .l-main section h3 {
     font-weight: 700;
@@ -258,12 +395,47 @@ main {
     font-weight: 100;
     font-size: 15px;
   }
+  .r-main aside h3 {
+    font-weight: 700;
+    font-size: 25px;
+  }
+  .r-main aside h4 {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .r-main aside p {
+    font-weight: 100;
+    font-size: 15px;
+  }
+  .r-main .s-section h4 {
+    font-size: 35px;
+  }
+  .r-main .i-section h4 {
+    font-weight: 300;
+    font-size: 15px;
+  }
+  .footer-content h4 {
+    font-size: 15px;
+  }
+  .footer-content .f-text-btn {
+    margin: 5px;
+  }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 991px) {
   .l-main section {
     width: 100%;
     overflow: hidden;
     left: 0;
+    margin: 0px;
+    margin-bottom: 5px;
+    padding: 0px;
+  }
+  .main-content .r-main {
+    right: 0%;
+  }
+  .r-main aside {
+    width: 100%;
+    overflow: hidden;
     margin: 0px;
     margin-bottom: 5px;
     padding: 0px;
@@ -290,9 +462,24 @@ main {
   .p-item h4 {
     font-size: 30px;
   }
+  .r-main .e-section {
+    padding: 15px;
+  }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 767px) {
   .p-item .p-img-a {
     height: 200px;
+  }
+  .header {
+    position: relative;
+  }
+  .header .profile-content {
+    display: none;
+  }
+  .main-content {
+    margin-bottom: 80px;
+  }
+  .footer-container {
+    display: flex;
   }
 }
