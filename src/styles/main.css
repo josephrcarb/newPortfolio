@@ -299,10 +299,6 @@ main {
   align-items: center;
   justify-content: center;
 }
-.e-section .content .e-img-a {
-  overflow: hidden;
-  width: 75%;
-}
 .e-section .content .e-img {
   width: 100%;
   height: 100%;
