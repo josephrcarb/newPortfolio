@@ -202,6 +202,9 @@ main {
 }
 
 /* Project Section */
+.hidden {
+  display: none !important;
+}
 .p-section .content .p-item {
   background: linear-gradient(to top, #ffffff 0%, #eaf3f3 100%);
   display: flex;
